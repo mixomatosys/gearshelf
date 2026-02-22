@@ -94,24 +94,31 @@ plugin_operating_systems (plugin_id, os_id)
 - Error pages and user-friendly messaging
 - Basic analytics (page views, popular searches)
 
-### **Week 3: Testing & Documentation**
+### **Week 3: Data Expansion & Testing**
 
-**Days 15-17: Testing & Bug Fixes**
-- Comprehensive testing of all features
-- Cross-browser compatibility testing
-- Performance testing with full dataset
-- Fix any issues discovered
+**Days 15-16: Data Expansion Tools**
+- Build admin interface for manual plugin addition/editing
+- Create bulk import capabilities (CSV/JSON)
+- Implement duplicate detection algorithms
+- Set up data validation and standardization
 
-**Days 18-21: Documentation & Deployment**
+**Days 17-19: Database Expansion**
+- Manual addition of top 500 commercial plugins
+- Focus on major vendors (Native Instruments, FabFilter, Waves, etc.)
+- Data quality validation and cleanup
+- Performance testing with expanded dataset (1,500+ plugins)
+
+**Days 20-21: Documentation & Deployment**
 - Complete API documentation
-- Deployment scripts and documentation
-- Backup and restore procedures
-- Performance monitoring setup
+- Deployment scripts and procedures
+- Data expansion strategy documentation
+- Performance monitoring and backup procedures
 
 ---
 
 ## **🔌 API Endpoints (Phase 1)**
 
+### **Public API**
 ```
 GET  /api/plugins              # List plugins with search/filter
 GET  /api/plugins/:id          # Single plugin details
@@ -121,6 +128,17 @@ GET  /api/formats              # List plugin formats
 GET  /api/operating-systems    # List supported OS
 GET  /api/stats                # Database statistics
 GET  /health                   # Health check
+```
+
+### **Admin API (Phase 1c - Data Expansion)**
+```
+POST /admin/plugins            # Add new plugin
+PUT  /admin/plugins/:id        # Update plugin
+DELETE /admin/plugins/:id      # Delete plugin
+POST /admin/plugins/import     # Bulk import plugins (CSV/JSON)
+GET  /admin/plugins/duplicates # Find potential duplicates
+POST /admin/plugins/merge      # Merge duplicate plugins
+GET  /admin/stats              # Admin statistics and metrics
 ```
 
 **Search & Filter Parameters:**
@@ -159,20 +177,27 @@ GET  /health                   # Health check
 
 ---
 
-## **📊 Initial Dataset**
+## **📊 Initial Dataset & Expansion Plan**
 
 **Starting with existing AudioShelf data:**
-- **622 plugins** with metadata
+- **622 plugins** with metadata (foundation)
 - **Major vendors:** Native Instruments, FabFilter, Xfer Records, Arturia, etc.
 - **Categories:** Synthesizers, Effects, Samplers, Utilities, etc.
 - **Formats:** VST, VST3, AU, AAX coverage
 - **Platforms:** Windows, macOS, Linux compatibility info
 
+**Phase 1 expansion target: 1,500+ plugins**
+- Manual addition of top 500 commercial plugins
+- Focus on completing major vendor catalogs (Native Instruments, Waves, FabFilter)
+- Admin tools for ongoing data management and quality control
+- Foundation for systematic expansion to 30,000+ plugins (see [DATA_EXPANSION_STRATEGY.md](DATA_EXPANSION_STRATEGY.md))
+
 **Data quality improvements:**
 - Standardize vendor names and categories
-- Add missing information where possible
+- Implement duplicate detection and merging
 - Validate URLs and system requirements
-- Add plugin descriptions and features
+- Add comprehensive plugin descriptions and technical specifications
+- Build admin interface for ongoing data curation
 
 ---
 
@@ -216,11 +241,13 @@ GET  /health                   # Health check
 ## **🚀 Deliverables**
 
 1. **Working LXC container** with complete application
-2. **GitHub repository** with all source code and documentation
-3. **Database** with 622+ plugins fully migrated and validated
-4. **Web interface** accessible on internal network
-5. **API documentation** for desktop app integration
-6. **Deployment guide** for maintenance and updates
+2. **GitHub repository** with all source code and documentation  
+3. **Expanded database** with 1,500+ plugins (up from 622 initial)
+4. **Web interface** accessible on internal network with advanced search/filtering
+5. **Admin interface** for ongoing plugin management and data expansion
+6. **API documentation** for both public and admin endpoints
+7. **Data expansion strategy** with tools for scaling to 30,000+ plugins
+8. **Deployment guide** for maintenance, updates, and scaling
 
 ---
 

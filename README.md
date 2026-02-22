@@ -53,12 +53,19 @@ GearShelf helps music producers discover new audio plugins and manage their exis
 
 ## **📊 Plugin Database**
 
-Starting with **622 high-quality audio plugins** including:
-- Synthesizers (Serum, Massive X, Diva, etc.)
-- Effects (FabFilter, Valhalla, Soundtoys, etc.) 
-- Sample libraries and instruments
-- Free and commercial plugins
-- Windows, macOS, and Linux support info
+**Phase 1 Target: 1,500+ plugins** (expanding from 622 foundation)
+- **Starting foundation:** 622 high-quality plugins from AudioShelf project
+- **Major vendors:** Native Instruments, FabFilter, Waves, Xfer Records, Arturia, etc.
+- **Categories:** Synthesizers, Effects, Samplers, Utilities, and more
+- **Formats:** VST, VST3, AU, AAX with platform compatibility
+- **Long-term goal:** Comprehensive database of 30,000+ available plugins
+
+**Data expansion strategy includes:**
+- Manual curation of top commercial plugins
+- Admin tools for quality control and duplicate management  
+- Automated data collection from major plugin sites
+- Community submission system for comprehensive coverage
+- Vendor partnerships for direct data integration
 
 ## **🚀 Getting Started**
 
@@ -78,6 +85,7 @@ cat DEVELOPMENT.md
 
 - [`PROJECT_VISION.md`](PROJECT_VISION.md) - Core principles and development philosophy
 - [`PHASE1_PLAN.md`](PHASE1_PLAN.md) - Detailed Phase 1 implementation plan
+- [`DATA_EXPANSION_STRATEGY.md`](DATA_EXPANSION_STRATEGY.md) - Strategy for scaling from 622 to 30,000+ plugins
 - [`DEVELOPMENT.md`](DEVELOPMENT.md) - Development setup and contribution guidelines
 - [`CHANGELOG.md`](CHANGELOG.md) - Version history and notable changes
 - [`API.md`](API.md) - API documentation (when ready)
