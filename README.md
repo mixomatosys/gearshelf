@@ -8,11 +8,13 @@ GearShelf helps music producers discover new audio plugins and manage their exis
 
 ## **🎯 Core Features**
 
-### **Phase 1: Plugin Discovery** (Coming Soon)
-- Browse 500+ audio plugins with detailed information
-- Search by name, vendor, category, format (VST, AU, etc.)
-- Filter by price (free/paid), operating system, plugin type
-- Simple web interface - no account required
+### **Phase 1: Plugin Database & Web Interface** (In Development)
+- Comprehensive database of 622+ audio plugins
+- Advanced search by name, vendor, category, format (VST, VST3, AU, AAX)
+- Multi-filter capabilities (price, OS, plugin type, etc.)
+- Clean web interface with mobile support
+- RESTful API for desktop app integration
+- Internal network deployment on Proxmox LXC
 
 ### **Phase 2: Desktop Companion** (Planned)
 - Scan your computer to inventory existing plugins
@@ -27,20 +29,27 @@ GearShelf helps music producers discover new audio plugins and manage their exis
 
 ## **📋 Current Status**
 
-🚧 **In Development** - Starting fresh with documentation-driven approach
+🚧 **Phase 1 Development** - Plugin Database & Web Interface
 
-- ✅ Project vision and guidelines established
-- ✅ Technology choices made (simple, proven tools)
-- 🔄 Currently building Phase 1 web interface
-- 📋 Next: Simple plugin database and search
+- ✅ Project vision and documentation complete
+- ✅ Technology stack selected (Node.js + PostgreSQL + nginx)
+- ✅ Detailed Phase 1 plan established ([PHASE1_PLAN.md](PHASE1_PLAN.md))
+- 🔄 Ready to start LXC container setup and implementation
+- 📋 Target: Working internal plugin database in 2-3 weeks
 
 ## **🛠️ Technology Stack**
 
-**Keep it simple:**
-- **Backend:** Node.js + Express + SQLite
-- **Frontend:** HTML/CSS/JavaScript (maybe Next.js later)
-- **Desktop:** Electron (evolving from existing AudioShelf project)
-- **Deployment:** Single server, PM2/systemd, nginx reverse proxy
+### **Phase 1: Web Database & API**
+- **Infrastructure:** Proxmox LXC container (Ubuntu 22.04)
+- **Backend:** Node.js + Express.js
+- **Database:** PostgreSQL (scalable, supports future features)
+- **Frontend:** Server-side rendered HTML + progressive JavaScript
+- **Process Management:** systemd service
+- **Reverse Proxy:** nginx (ready for external access)
+
+### **Phase 2: Desktop App (Planned)**
+- **Framework:** Electron (evolving from existing AudioShelf project)
+- **API Integration:** REST calls to Phase 1 backend
 
 ## **📊 Plugin Database**
 
@@ -68,6 +77,7 @@ cat DEVELOPMENT.md
 ## **📖 Documentation**
 
 - [`PROJECT_VISION.md`](PROJECT_VISION.md) - Core principles and development philosophy
+- [`PHASE1_PLAN.md`](PHASE1_PLAN.md) - Detailed Phase 1 implementation plan
 - [`DEVELOPMENT.md`](DEVELOPMENT.md) - Development setup and contribution guidelines
 - [`CHANGELOG.md`](CHANGELOG.md) - Version history and notable changes
 - [`API.md`](API.md) - API documentation (when ready)
